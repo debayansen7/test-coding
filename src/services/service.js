@@ -12,8 +12,13 @@ export const fetchData = async () => {
       "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "https://eacp.energyaustralia.com.au",
     },
-  })
-    .then((response) => {
-      return response.text();
-    })
+  }).then((response) => {
+    return response.text();
+  });
 };
+
+/**
+ * Function to transform Data
+ * @returns
+ */
+const transformData = () => {};
