@@ -3,12 +3,6 @@ import { fetchData } from "../services/service";
 import ButtonComponent from "../components/Button/buttoncomponent";
 import ListComponent from "../components/List/listcomponent";
 
-/**
- * Function to show Data
- * @returns
- */
-const showData = () => {};
-
 // Main functional component
 export default function Main() {
   let fetchedData = [];
@@ -22,7 +16,8 @@ export default function Main() {
   return (
     <>
       <section>
-        Click to view Record Labels <ButtonComponent />
+        Click to view Record Labels{" "}
+        <ButtonComponent triggerSearch={fetchData} />
       </section>
       <ListComponent />
     </>

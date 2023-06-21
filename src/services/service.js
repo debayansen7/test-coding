@@ -10,10 +10,24 @@ export const fetchData = async () => {
     mode: "no-cors",
     header: {
       "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "https://eacp.energyaustralia.com.au",
+      "Access-Control-Allow-Origin": "*",
+      // "Access-Control-Allow-Origin": "https://eacp.energyaustralia.com.au",
     },
   })
     .then((response) => {
-      return response.text();
+      response.text();
     })
+    .then((data) => {
+      return data;
+    });
+};
+
+/**
+ * Function to transform Data
+ * @returns
+ */
+const transformData = (oldData) => {
+  const newData = [];
+  console.log(oldData);
+  return newData;
 };
