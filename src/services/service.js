@@ -10,12 +10,11 @@ export const fetchData = async () => {
     mode: "no-cors",
     header: {
       "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*",
-      // "Access-Control-Allow-Origin": "https://eacp.energyaustralia.com.au",
+      "Access-Control-Allow-Origin": "https://eacp.energyaustralia.com.au",
     },
   })
     .then((response) => {
-      response.text();
+      response.json();
     })
     .then((data) => {
       return data;
@@ -26,7 +25,7 @@ export const fetchData = async () => {
  * Function to transform Data
  * @returns
  */
-const transformData = (oldData) => {
+export const transformData = (oldData) => {
   const newData = [];
   console.log(oldData);
   return newData;
