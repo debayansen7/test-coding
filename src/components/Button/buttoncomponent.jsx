@@ -1,3 +1,3 @@
-export default function ButtonComponent () {
-  return <button>Show List</button>;
+export default function ButtonComponent({ triggerSearch }) {
+  return <button onclick={triggerSearch}>Show List</button>;
 }
