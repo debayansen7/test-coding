@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+.ButtonArea {
+  padding: 20px 0px;
+  border-bottom: 2px solid palevioletred;
+}

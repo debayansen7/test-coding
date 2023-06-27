@@ -53,6 +53,13 @@ export const generateObject = (band, festival) => ({
   bands: [{ 'name': band.name, 'festival': festival.name }],
 })
 
+/**
+ * Function to transform the old list
+ * @param {*} currentList 
+ * @param {*} band 
+ * @param {*} festival 
+ * @returns formated new List 
+ */
 export const updateNewList = (currentList, band, festival) => {
   const newList = [];
   if (currentList.length > 0) {

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../App.css";
 import { fetchData, transformData } from "../services/service";
 import ButtonComponent from "../components/Button/buttoncomponent";
 import ListComponent from "../components/List/listcomponent";
@@ -28,11 +29,9 @@ export default function Main() {
 
   return (
     <>
-      <section>
+      <section className="ButtonArea">
         Click to view Record Labels <ButtonComponent triggerSearch={getData} />
       </section>
-      <h1>{showList}</h1>
-      <h1>{showList}</h1>
       {showList ? (
         <ListComponent
           showData={showList}
