@@ -1,11 +1,21 @@
+import "../../App.css";
+
 export function listBands(data) {
   return (
     <ul>
       {data.bands.map((band, index) => {
         return (
           <li key={index}>
-            <h5>Band: {band.name}</h5>
-            <p>&nbsp; Festival: {band.festival}</p>
+            <p>
+              Band: <span className="boldName">{band.name}</span>
+            </p>
+            <ul>
+              <li>
+                <p>
+                  Festival: <span className="boldName">{band.festival}</span>
+                </p>
+              </li>
+            </ul>
           </li>
         );
       })}
@@ -25,7 +35,10 @@ export default function ListComponent(props) {
                 if (data.recordLabel !== "" && data.recordLabel !== undefined) {
                   const recordLabelData = (
                     <li key={index}>
-                      <h3>Record Label: {data.recordLabel}</h3>
+                      <p>
+                        Record Label:{" "}
+                        <span className="boldName">{data.recordLabel}</span>
+                      </p>
                       {listBands(data)}
                     </li>
                   );
